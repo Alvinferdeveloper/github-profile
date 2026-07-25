@@ -12,12 +12,14 @@
     "rewrites": [
         {
             "source": "/api/backend/(.*)",
-            "destination": "service:backend/$1"
+            "destination": {
+                "service": "backend",
+                "path": "/$1"
+            }
         },
         {
             "source": "/(.*)",
             "destination": {
-                "type": "service",
                 "service": "frontend"
             }
         }
