@@ -24,6 +24,24 @@ Este es un proyecto completo que consta de un backend desarrollado en **NestJS**
 
 ---
 
+## Variables de Entorno
+
+El frontend acepta la siguiente variable de entorno opcional:
+
+| Variable | Descripción | Valor por defecto |
+|---|---|---|
+| `NEXT_PUBLIC_API_URL` | URL base del servidor backend | `http://localhost:3001` |
+
+Para configurarla en desarrollo, crea o edita el archivo `frontend/.env.local`:
+
+```env
+NEXT_PUBLIC_API_URL=https://tu-backend-en-produccion.com
+```
+
+> En desarrollo local **no es necesario** definirla; el sistema usará `http://localhost:3001` automáticamente.
+
+---
+
 ## Instalación y Configuración
 
 Sigue estos pasos para instalar las dependencias de ambas partes del proyecto:
