@@ -27,7 +27,7 @@ export default function SearchInput({ initialUsername = '' }: SearchInputProps) 
         type="text"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-        placeholder="Enter GitHub username (e.g. google)"
+        placeholder="Ingresa usuario de github (e.g. google)"
         className="flex-1 px-4 py-2.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-150"
       />
       <button
