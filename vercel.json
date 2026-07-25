@@ -11,19 +11,12 @@
     },
     "rewrites": [
         {
-            "source": "/api/backend/(.*)",
-            "destination": {
-                "type": "service",
-                "service": "backend",
-                "endpoint": "/$1"
-            }
+            "source": "/api/backend/:path*",
+            "destination": "service:backend/:path*"
         },
         {
-            "source": "/(.*)",
-            "destination": {
-                "type": "service",
-                "service": "frontend"
-            }
+            "source": "/:path*",
+            "destination": "service:frontend/:path*"
         }
     ]
 }
