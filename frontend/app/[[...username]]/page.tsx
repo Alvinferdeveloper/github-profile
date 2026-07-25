@@ -110,12 +110,10 @@ export default async function Page({ params }: PageProps) {
             {/* Identity: Avatar + Name + Bio */}
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6 text-center sm:text-left pb-6 border-b border-zinc-100 dark:border-zinc-800">
               <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-full overflow-hidden border border-zinc-200 dark:border-zinc-700 shrink-0">
-                <Image
+                <img
                   src={profile.avatar_url}
                   alt={`${profile.name || profile.login}'s avatar`}
-                  fill
                   sizes="(max-width: 768px) 80px, 96px"
-                  priority
                   className="object-cover"
                 />
               </div>
