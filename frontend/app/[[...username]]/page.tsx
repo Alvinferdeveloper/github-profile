@@ -22,7 +22,7 @@ interface PageProps {
 }
 
 async function fetchProfile(username: string): Promise<GithubProfile> {
-  const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3001';
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3001/api/backend';
   const url = username
     ? `${baseUrl}/user/${username}`
     : `${baseUrl}/user`;
