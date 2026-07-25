@@ -4,6 +4,12 @@ Este es un proyecto completo que consta de un backend desarrollado en **NestJS**
 
 ---
 
+## Captura de Pantalla
+
+![Vista del proyecto](/frontend/public/docs/screenshot.png)
+
+---
+
 ## Estructura del Proyecto
 
 * **`/backend`**: API de NestJS que consulta la API pública de GitHub. Escucha en el puerto `3001` y tiene habilitado el soporte para CORS.
