@@ -37,15 +37,15 @@ describe('AppController (e2e)', () => {
     it('should return default profile if no username is provided', async () => {
       fetchSpy.mockResolvedValue({
         ok: true,
-        json: () => Promise.resolve({ login: 'albinferdev', name: 'Albin', bio: 'Developer' }),
+        json: () => Promise.resolve({ login: 'Alvinferdeveloper', name: 'Alvin', bio: 'Developer' }),
       } as Response);
 
       const res = await request(app.getHttpServer())
         .get('/user')
         .expect(200);
 
-      expect(res.body).toEqual({ login: 'albinferdev', name: 'Albin', bio: 'Developer' });
-      expect(fetchSpy).toHaveBeenCalledWith('https://api.github.com/users/albinferdev', expect.any(Object));
+      expect(res.body).toEqual({ login: 'Alvinferdeveloper', name: 'Alvin', bio: 'Developer' });
+      expect(fetchSpy).toHaveBeenCalledWith('https://api.github.com/users/Alvinferdeveloper', expect.any(Object));
     });
 
     it('should return profile for the specified username', async () => {
